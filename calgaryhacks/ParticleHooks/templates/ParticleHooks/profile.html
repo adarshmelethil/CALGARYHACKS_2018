@@ -1,0 +1,80 @@
+
+{% extends 'ParticleHooks/base.html' %}
+
+{% load staticfiles %}
+{% block body %}
+<table>
+  <thead>
+    <tr>
+      <th colspan="3">Devices</th>
+    </tr>
+    <tr>
+      <th colspan="2">Coreid</th>
+    </tr>
+  </thead>
+  <tbody>
+  	{% for device in user.devices_set.all %}
+	<form class="form-horizontal" action="{% url 'ParticleHooks:removeDevice' %}" method="post">
+  		{% csrf_token %}
+  		<!-- <input type="" name="numberid" value="" display="false"> -->
+	    <tr>
+	      <td>{{ device.coreid }}</td>
+	      <input type="hidden" name="deviceid" value="{{ device.id }}">
+	      <td>
+	      	<input type="submit" value=" Delete "/>
+	      </td>
+	    </tr>
+    </form>
+    {% endfor %}
+
+    <form class="form-horizontal" action="{% url 'ParticleHooks:addDevice' %}" method="post">
+    	{% csrf_token %}
+    	<tr>
+    		<td>
+    			<input id="coreid" name="coreid" required="required" type="text" placeholder="Coreid"/>
+    		</td>
+    		<td><input type="submit" value="   Add   "/> </td>
+    	</tr>
+    </form>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3">Phone Numbers</th>
+    </tr>
+    <tr>
+      <th colspan="2">Number</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  	{% for number in user.phonenumber_set.all %}
+  	<form class="form-horizontal" action="{% url 'ParticleHooks:removeNumber' %}" method="post">
+  		{% csrf_token %}
+	    <tr>
+	      <td>{{ number.phone_num }}</td>
+	      <input type="hidden" name="numberid" value="{{ number.id }}">
+	      <td>
+	      	<input type="submit" value=" Delete "/>
+	      </td>
+	    </tr>
+    </form>
+    {% endfor %}
+
+    <form class="form-horizontal" action="{% url 'ParticleHooks:addNumber' %}" method="post">
+    	{% csrf_token %}
+    	<tr>
+    		<td>
+    			<input id="numberid" name="numberid" required="required" type="text" placeholder="Phone number"/>
+    		</td>
+    		<td><input type="submit" value="   Add   "/> </td>
+    	</tr>
+        
+        
+    </form>
+  </tbody>
+</table>
+{% endblock %}
+

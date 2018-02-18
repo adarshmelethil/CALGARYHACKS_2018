@@ -1,0 +1,221 @@
+{% extends 'main/base.html' %}
+
+{% load staticfiles %}
+{% block title %}Remote Protector{% endblock %}
+{% block body %}
+<header class="masthead">
+  <div class="container h-100">
+    <div class="row h-100">
+      <div class="col-lg-7 my-auto">
+        <div class="header-content mx-auto">
+          <h1 class="mb-5">Do it for grandma!</h1>
+          <a href="#SignUpLogin" class="btn btn-outline btn-xl js-scroll-trigger">Start Now for Free!</a>
+        </div>
+      </div>
+      <div class="col-lg-5 my-auto">
+        <div class="device-container">
+          <div class="device-mockup iphone6_plus portrait white">
+            <div class="device">
+              <div class="screen">
+                <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                <img src="{% static 'img/remote-protector.png' %}" class="img-fluid" alt="">
+              </div>
+              <div class="button">
+                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- <section class="download bg-primary text-center" id="download">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h2 class="section-heading">Discover what all the buzz is about!</h2>
+        <p>Our app is available on any mobile device! Download now to get started!</p>
+        <div class="badges">
+          <a class="badge-link" href="#"><img src="{% static 'img/google-play-badge.svg' %}" alt=""></a>
+          <a class="badge-link" href="#"><img src="{% static 'img/app-store-badge.svg' %}" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-heading text-center">
+      <h2>Protect your loved ones, wherever you are!</h2>
+      <p class="text-muted">Check out what you can do with this app!</p>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 my-auto">
+        <div class="device-container">
+          <div class="device-mockup iphone6_plus portrait white">
+            <div class="device">
+              <div class="screen">
+                <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                <img src="{% static 'img/remote-protector.png' %}" class="img-fluid" alt="">
+              </div>
+              <div class="button">
+                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 my-auto">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="feature-item">
+                <i class="icon-screen-smartphone text-primary"></i>
+                <h3>Device Mockups</h3>
+                <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="feature-item">
+                <i class="icon-camera text-primary"></i>
+                <h3>Flexible Use</h3>
+                <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="feature-item">
+                <i class="icon-present text-primary"></i>
+                <h3>Free to Use</h3>
+                <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="feature-item">
+                <i class="icon-lock-open text-primary"></i>
+                <h3>Open Source</h3>
+                <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta-content">
+    <div class="container">
+      <h2>Stop waiting.<br>Start building.</h2>
+      <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</section>
+
+<section class="contact bg-primary" id="contact">
+  <div class="container">
+    <h2>We
+      <i class="fa fa-heart"></i>
+      new friends!</h2>
+    <ul class="list-inline list-social">
+      <li class="list-inline-item social-twitter">
+        <a href="#">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </li>
+      <li class="list-inline-item social-facebook">
+        <a href="#">
+          <i class="fa fa-facebook"></i>
+        </a>
+      </li>
+      <li class="list-inline-item social-google-plus">
+        <a href="#">
+          <i class="fa fa-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="SignUpLogin bg-primary text-center" id="SignUpLogin">
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <h2 class="section-heading">Discover what all the buzz is about!</h2>
+        <p>Our app is available on any mobile device! Download now to get started!</p>
+        <div class="badges">
+          <a class="badge-link" href="#"><img src="{% static 'img/google-play-badge.svg' %}" alt=""></a>
+          <a class="badge-link" href="#"><img src="{% static 'img/app-store-badge.svg' %}" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div id="container_demo" >
+    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+    <a class="hiddenanchor" id="toregister"></a>
+    <a class="hiddenanchor" id="tologin"></a>
+    <div id="wrapper">
+      <div id="login" class="animate form">
+        <form  action="" method="post" autocomplete="on"> 
+          <h1>Log in</h1> 
+          <p> 
+            <label for="username" class="uname" >username </label>
+            <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+          </p>
+          <p> 
+            <label for="password" class="youpasswd"> Your password </label>
+            <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+          </p>
+          <p class="keeplogin"> 
+            <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+            <label for="loginkeeping">Keep me logged in</label>
+          </p>
+          <p class="login button"> 
+            <a href="http://cookingfoodsworld.blogspot.in/" target="_blank" ></a>
+          </p>
+          <p class="signin button"> 
+            <input type="submit" value="Login"/> 
+          </p>
+          <p class="change_link">
+            Not a member yet ?
+            <a href="#toregister" class="to_register">Join us</a>
+          </p>
+        </form>
+      </div>
+
+      <div id="register" class="animate form">
+        <form  action="" method="post" autocomplete="on"> 
+          <h1> Sign up </h1> 
+          <p> 
+            <label for="usernamesignup" class="uname" >Your username</label>
+            <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="mysuperusername690" />
+          </p>
+          <p> 
+            <label for="passwordsignup" class="youpasswd" >Your password </label>
+            <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="eg. X8df!90EO"/>
+          </p>
+          <p> 
+            <label for="passwordsignup_confirm" class="youpasswd" >Please confirm your password </label>
+            <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="eg. X8df!90EO"/>
+          </p>
+          <p class="signin button"> 
+            <input type="submit" value="Sign up"/> 
+          </p>
+          <p class="change_link">  
+            Already a member ?
+            <a href="#tologin" class="to_register"> Go and log in </a>
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>  
+
+</section>
+{% endblock %}
