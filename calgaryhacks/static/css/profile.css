@@ -68,3 +68,9 @@ td:last-child {
 .delete:hover {
   color: #dc2a2a;
 }
+
+#mainNav {
+  border-color: rgba(34, 34, 34, 0.1);
+  background-color: rgba(34, 34, 34, 0.2);
+
+}
